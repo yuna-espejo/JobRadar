@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-from app.api.routes import auth
+from app.api.routes import auth, roles
 
-app = FastAPI(title="Mekari API")
+app = FastAPI(title="Meraki API")
 
 app.include_router(auth.router)
+app.include_router(roles.router)
